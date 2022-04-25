@@ -1,25 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Navbar } from "./components";
+import { ProjectCard } from "./components/ProjectCard";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <ProjectCard title="Hate my life" image="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcRgjNeqYzjgKRaNE5Qgl08HMn3qCXHNDuajY6v1rBiLLvmcL5_E16UtCNjOYy5fpIfCuumYy_yzX3w3m5zfNeA" />
+    </>
   );
 }
 
