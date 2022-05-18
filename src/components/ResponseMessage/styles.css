@@ -1,0 +1,14 @@
+.response-container {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.sucess {
+    background-color: #198754;
+}
+
+.error {
+    background-color: #ff3333,;
+}

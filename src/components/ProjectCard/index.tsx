@@ -1,16 +1,21 @@
 import React, { FC } from "react";
+import { ProjectInfo } from "../ProjectInfo";
+import { useProjectCard } from "./hook";
 import { IProps } from "./IProps";
 import "./styles.css"
 
-export const ProjectCard: FC<IProps> = ({ title, image }): JSX.Element => {
+export const ProjectCard: FC<IProps> = ({ id, title, image }): JSX.Element => {
+    const { show, onClick } = useProjectCard();
+
     return (
-        <div className="project-card">
-            <div style={{ paddingTop: 4, borderBottom: "2px solid black", textAlign: "center"}} >
-                <h4>{title}</h4>
+        <>
+            { show && <ProjectInfo id={id} onClick={onClick} /> }
+            <div className="project-card" onClick={onClick} >
+                <div className="absolute-title" >
+                    <h4>{title}</h4>
+                </div>
+                <img src={`http://localhost:4000/uploads/${image}`} />
             </div>
-            <div style={{ width: "100%", height: "auto"}} >
-                <img src={image} width="100%" height="100%" style={{objectFit: "cover"}} />
-            </div>
-        </div>
+        </>
     )
 }

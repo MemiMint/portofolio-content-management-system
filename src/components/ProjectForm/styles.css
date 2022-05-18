@@ -1,0 +1,19 @@
+.shadow-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-form {
+    width: 800px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+}
+

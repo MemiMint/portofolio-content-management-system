@@ -1,3 +1,3 @@
 export interface IProps {
-    onClick: () => void;
+    src: string;
 }
